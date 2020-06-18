@@ -1,0 +1,24 @@
+<html>
+  <head>Amount Pipe </head>
+  <body>
+    <p>Pipe pour montant avec virgule </p>
+    <div style="margin-top: 45px;">
+    {{amount | number }}
+    </div>
+
+    <p>Pipe pour montant avec decimale  </p>
+    <div style="margin-top: 45px;">
+    {{am | number :'1.2-4' }}
+    <p>Pipe pour montant avec currency  </p>
+
+    <p>{{ amount | currency: 'EUR':'symbol':'4.2-4':'fr-FR' }}</p>
+    <p>Pipe pour la date </p>
+    {{ myDate | date: 'dd/MM/yyyy' }}
+    <p>Pipe pour la date customiser </p>
+    {{ myDate | date:'d'}}-{{ myDate | date:'MM'}}-{{ myDate | date:'y'}}
+
+    <p>Pipe pour prefixer </p>
+    {{ name | prefixNomPipe :'M .'}}
+    </div>
+  </body>
+</html>
